@@ -1,4 +1,6 @@
 import './sass/main.scss';
+import * as basicLightbox from 'basiclightbox';
+import 'basicLightbox/src/styles/main.scss';
 import apiService from './js/apiService';
 import imageCardMarkup from './templates/image-card';
 
@@ -50,5 +52,14 @@ function clearImageCards() {
   galleryEl.innerHTML = '';
 }
 
+function showLightbox(event) {
+  if (event.target.nodeName !== 'IMG') return;
+  const basicLightboxInstance = basicLightbox.create(`
+    <img src="${event.target.dataset.original}" width="800" height="600">
+  `);
+  basicLightboxInstance.show();
+};
+
 searchFormEl.addEventListener('submit', makeFirstSearch);
 loadMoreButtonEl.addEventListener('click', makeAnotherSearch);
+galleryEl.addEventListener('click', showLightbox);
