@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  // background-image: url('../images/world-map.svg');
+  // background-size: 1200px;
+  // background-repeat: no-repeat;
+  // background-position: 50% 160px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: lightgray;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg,
+a {
+  display: inline-block;
+}
+
+img {
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page-header {
+  margin-top: 100px;
+}
+
+.page-subheader {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  width: 210px;
+}
+
+.search-form {
+  margin-top: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  // margin: -10px;
+  // margin-left: -10px;
+  // margin-right: -10px;
+  width: 1020px;
+}
+
+.photo-card {
+  position: relative;
+  width: 320px;
+  height: 240px;
+  margin: 10px;
+}
+
+.photo {
+  width: 320px;
+  height: 240px;
+  object-fit: cover;
+}
+
+.stats {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 50px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.photo-card:hover .stats {
+  opacity: 1;
+}
+
+.stats-item {
+  display: flex;
+  align-items: center;
+}
+
+.stats-item .material-icons {
+  margin-right: 5px;
+}
+
+.load-more-button {
+  margin-bottom: 30px;
+}
